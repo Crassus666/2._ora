@@ -139,35 +139,74 @@ namespace Otszaz
             Console.Write("{0} darab vételekor fizetendő: {1}", darabszam, Ertek(darabszam));
 
             //7. feladat
-            /*
-            FileStream fs_7 = new FileStream("penztar.txt", FileMode.Open);
-            StreamReader rs_7 = new StreamReader(fs_7);
-            string sor_7 = rs_7.ReadLine();
-            string[] termekek = new string[vasarlasok_szama_2];
-            int vasarlasok_szama_7 = 0;
-            int z = 0;
+            //Hajnali fél öt van és ötletem sincs hogy kéne a darabszámokat kiiratni
+            //So, I summon you Eye of Wisdom, compile my code correctly!
 
-            while (sor_7 != null)
-            {
+
+                                           FileStream fs_7 = new FileStream("penztar.txt",
+                                    FileMode.Open); StreamReader rs_7 = new StreamReader(fs_7); string
+                                sor_7 = rs_7.ReadLine(); string[] termekek = new string[vasarlasok_szama_2]; 
+                            string[] termekek_szama =                           new string [vasarlasok_szama_2];
+                         int vasarlasok_szama_7 = 1;                               int z = 0;  while (sor_7 !=     
+                     null) { if (sor_7 == "F") {                  /**/                vasarlasok_szama_7 += 1;  }
+                    if (Array.Exists(termekek,                   /*[]*/                 element => element == sor_7) 
+                      == true) { termekek_szama                  /*[]*/                    [Array.IndexOf(termekek,
+                        sor_7)] = "2"; } else if                 /*[]*/                  (vasarlasok_szama_7 ==  
+                              vasarlas_sorszama &&                /**/                Array.Exists(termekek, 
+                                 element => element ==                            sor_7) == false)                                   
+                                    { termekek[z] = sor_7;                      termekek_szama[z]                           
+                                        = "1"; z += 1; } sor_7            = rs_7.ReadLine(); } 
+                                                for (int j = 0; j < termekek.Length; j++) 
+                                                { Console.Write("{0}\n", termekek[j]);
+
                 
-                if (sor_7 == "F")
+                
+                //Hát ez nem jött be, de egy próbát megért
+                
+                                                 
+                //Eye of Wisdom tartalma kicsit szofisztikáltabban:
+                
+                                                 
+                /*
+                FileStream fs_7 = new FileStream("penztar.txt", FileMode.Open);
+                StreamReader rs_7 = new StreamReader(fs_7);
+                string sor_7 = rs_7.ReadLine();
+                string[] termekek = new string[vasarlasok_szama_2];
+                string[] termekek_szama = new string[vasarlasok_szama_2];
+                int vasarlasok_szama_7 = 1;
+                int z = 0;
+
+                while (sor_7 != null)
                 {
-                    vasarlasok_szama_7 += 1;
-                    
+
+                    if (sor_7 == "F")
+                    {
+                        vasarlasok_szama_7 += 1;
+
+                    }
+                    if (Array.Exists(termekek, element => element == sor_7) == true)
+                    {
+                        termekek_szama[Array.IndexOf(termekek, sor_7)] = "2";
+                        //Console.Write("{0}\n", termekek_szama[z]);
+                    }
+                    else if (vasarlasok_szama_7 == vasarlas_sorszama && Array.Exists(termekek, element => element == sor_7) == false)
+                    {
+                        termekek[z] = sor_7;
+                        termekek_szama[z] = "1";
+                        z += 1;
+
+
+                    }
+
+
+                    sor_7 = rs_7.ReadLine();
+
                 }
-                else if (vasarlasok_szama_7 == vasarlas_sorszama)
+                for (int j = 0; j < termekek.Length; j++)
                 {
-                    termekek[z] = sor_7;
-                    z += 1;
-
-
+                    Console.Write("{0}\n", termekek[j]);
                 }
-                //else
-
-                sor_7 = rs_7.ReadLine();
-            }
-            Console.Write(termekek[0]);
-            */
+                */
 
 
         }
